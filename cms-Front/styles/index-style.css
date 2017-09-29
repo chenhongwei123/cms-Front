@@ -1,0 +1,156 @@
+@font-face {
+    font-family: NotoSans-Regular;
+    src: url('../fonts/NotoSans-Regular.ttf');
+}
+
+
+.ul-style li > a:hover{
+    color: black;
+}
+
+
+@media (min-width: 768px){
+    .main{
+        padding-right: 2%;
+        padding-left: 3%;
+    }
+
+}
+
+.main .page-header{
+    margin-top: 0;
+}
+
+.main-index{
+    background-color: #EAEAEA;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+
+
+/**
+ *统计信息显示盒子
+ *
+ */
+.info-box{
+    min-height: 130px;
+    margin-bottom: 30px;
+    color: white;
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,255),
+    inset 0 3px 1px -1px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.red-bg{
+    color: #ffffff;
+    background: #FF5A5F;
+    background-color: #FF5A5F;
+    box-shadow: 2px 2px 16px #333333;
+}
+
+.green-bg{
+    color: white;
+    background: #62B257;
+    background-color: #4BAE4F;
+    box-shadow: 2px 2px 16px #333333;
+
+}
+
+.blue-bg{
+    color: #fdfdfd;
+    background: #46AEE6;
+    background-color: #46AEE6;
+    box-shadow: 2px 2px 16px #333333;
+
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    .info-box .count {
+        float: right;
+        margin-right: 25%;
+        margin-top: -23%;
+        font-size: 30px;
+    }
+
+    .info-box .title{
+        position: relative;
+        left: 10%;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .info-box-left{
+        width: 150px;
+        height: 130px;
+        display: block;
+        position: relative;
+        padding-top: 10%;
+        padding-bottom: -10%;
+    }
+
+    .user-title,.order-title,.shop-title,.nurse-title{
+        margin-left: -13%;
+        text-align: center;
+    }
+}
+
+/*
+ *响应式设计
+**/
+@media screen and (min-width: 1903px) {
+    .info-box .count {
+        float: right;
+        margin-right: 25%;
+        margin-top: -14%;
+        font-size: 30px;
+    }
+
+    .info-box .title{
+        position: relative;
+        left: 6%;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .info-box-left{
+        width: 150px;
+        height: 130px;
+        display: block;
+        position: relative;
+        padding-top: 6%;
+        padding-bottom: -10%;
+    }
+
+    .user-title,.order-title,.shop-title{
+        margin-left: -7%;
+        text-align: center;
+    }
+}
+
+.cms-navbar{
+    background-color: #009688;
+}
+
+
+
+.cms-font{
+    font-family: NotoSans-Regular;
+}
+
+
+
+.show-icon{
+    position: relative;
+    padding-top: -20%;
+    padding-left: 35%;
+    padding-right: 35%;
+
+}
+
+
+
+
+

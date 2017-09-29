@@ -1,0 +1,420 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>护工认证</title>
+		<link href="../styles/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="../styles/nurse-style.css" rel="stylesheet">
+		<link href="../styles/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="../styles/base.css" rel="stylesheet">
+		<link href="../styles/remodal-default-theme.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<!--创建导航条-->
+		<nav class="cms-navbar navbar navbar-fixed-top navbar-inverse navbar-styles" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand cms-font" href="index.html">鸿安CMS系统</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<p class="navbar-text">你好<span class="admin-name">admin</span></p>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">个人中心</a>
+								</li>
+								<li>
+									<a href="#">权限配置</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a class="logout">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+			<div class="cms-shadow"></div>
+		</nav>
+
+		<!--创建底部-->
+		<div class="container-fluid ">
+			<div class="row">
+				<!--创建侧边栏-->
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar ul-style">
+						<li class="active">
+
+							<a href="dish.html">
+								<img src="../images/dishmin.png">
+								<span class="text">菜品管理</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="banner.html">
+								<img src="../images/banner.png">
+								<span class="text">Banner管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="shop.html">
+								<img src="../images/shopMini.png">
+								<span class="text">商户认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="vision.html">
+								<img src="../images/visionMini.png">
+								<span class="text">版本管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activity.html">
+								<img src="../images/actMin.png">
+								<span class="text">充送活动</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="user.html">
+								<img src="../images/userMin.png">
+								<span class="text">用户管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="order.html">
+								<img src="../images/orderMin.png">
+								<span class="text">食堂订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurseOrders.html">
+								<img src="../images/nurseOrdersMin.png">
+								<span class="text cms-font">护理订单</span>
+							</a>
+						</li>
+						<li class="active" style="background-color: #b4bcc2;">
+							<a href="nurse.html">
+								<img src="../images/nurseMin.png">
+								<span class="text">护工认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activityReleased.html">
+								<img src="../images/discountMini.png">
+								<span class="text cms-font">活动发布</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="updateDoctor.html">
+								<img src="../images/updateDoctorMini.png">
+								<span class="text cms-font">修改护理项目</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="customer.html">
+								<img src="../images/customerMini.png">
+								<span class="text cms-font">浏览反馈</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="skill.html">
+								<img src="../images/dishmin.png">
+								<span class="text cms-font">服务技能</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="hint.html">
+								<img src="../images/wenxinx.png">
+								<span class="text cms-font">温馨提示</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="healthTypes.html">
+								<img src="../images/healthMin.png">
+								<span class="text cms-font">健康报告类型</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="Item.html">
+								<img src="../images/ItemMin.png">
+								<span class="text cms-font">健康报告条目</span>
+							</a>
+
+						</li>
+						
+						<li class="active">
+							<a href="healthProducts.html">
+								<img src="../images/baojianpingMin.png">
+								<span class="text cms-font">保健品品牌</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="healthKind.html">
+								<img src="../images/bjpMin.png">
+								<span class="text cms-font">保健品种类</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="supplys.html">
+								<img src="../images/supplysMin.png">
+								<span class="text cms-font">供应商</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="bourn.html">
+								<img src="../images/bournMin.png">
+								<span class="text cms-font">旅行目的地</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="message.html">
+								<img src="../images/messageMin.png">
+								<span class="text cms-font">短信群发</span>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--创建操作面板-->
+			<div class="col-sm-9 col-md-10 col-sm-offset-3 col-md-offset-2 main-console">
+				<div style="display: block;" id="cover">
+
+				</div>
+
+				<!--当前位置显示-->
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header h3-style">
+                    <img src="../images/nurseMax.png">
+                    <a href="nurse.html">护工认证</a>
+                </h3>
+						<ol class="breadcrumb breadcrumb-bg">
+							<li>
+								<img src="../images/web.png">
+								<span>Home</span>
+							</li>
+							<li>
+								<img src="../images/nurseMin.png">
+								<span>护工认证</span>
+							</li>
+
+						</ol>
+					</div>
+				</div>
+				<!--表格显示-->
+				<div class="row">
+					<div class="col-md-4">
+						<select id="type1" class="stateSelect">
+							<option>请点击下拉选择类型</option>
+							<option>+0-未审核护工</option>
+							<option>+1-杭州地区护工(已审核)</option>
+							<option>-1-下架护工</option>
+						</select>
+					</div>
+					<div class="col-md-6">
+						<select class="select1 stateSelect select">
+							<!--  <option>点击下拉显示需要搜索的类型</option>-->
+							<option>通过护工姓名搜索</option>
+							<option>通过护工手机号搜索</option>
+						</select>
+
+						<input type="text" class="form-controlx wd" name="wd" placeholder="输入要搜索的值">
+
+						<button class="btn btn-default searchsub" id="searchOrder" onclick="return false">搜索</button>
+					</div>
+					<div class="col-md-2">
+						<a href="regNurse.html"><button class="btn btn-default">添加护工</button></a>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-hover cms-table">
+							<thead>
+								<tr>
+									<th>数据id</th>
+									<th>服务时间类型</th>
+									<th>护工姓名</th>
+									<th>手机号</th>
+									<th>性别</th>
+									<th>身份证号</th>
+									<th>工作年限</th>
+									<th>创建时间</th>
+									<th>更新时间</th>
+									<th>详情</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody id="tbody1">
+
+							</tbody>
+						</table>
+						<div id="Paging">
+							<input type="button" id="PrevPage" value="上一页" />
+							<input type="button" id="NextPage" value="下一页">
+							<input type="text" value="0" style="display: none;" id="dishpageval" />
+							<div id="pagination" style="text-align: center;">
+								<span>第</span>
+								<b id="change1">1</b>
+								<span>页</span>
+							</div>
+						</div>
+					</div>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<div class="jumbotron">
+										<div class="container">
+											<h3>审核面板</h3>
+										</div>
+
+									</div>
+								</div>
+								<div class="modal-body">
+
+									<div class="bs-example bs-example-tabs">
+										<ul id="myTabs" class="nav nav-tabs" role="tablist">
+											<li role="presentation" class="active">
+												<a href="#success" id="success-tab" role="tab" data-toggle="tab" aria-controls="success" aria-expanded="true">Successed</a>
+
+											</li>
+											<li role="presentation" class="active">
+												<a href="#faile" id="faile-tab" role="tab" data-toggle="tab" aria-controls="faile" aria-expanded="true">Faile</a>
+											</li>
+
+										</ul>
+										<div id="myTabContent" class="tab-content">
+											<div role="tabpanel" class="tab-pane fade active in" id="success" aria-labelledby="success-tab">
+												<div class="container base-container">
+													<select id="select1" class="form-control base-size">
+														<option>1-审核为杭州地区护工</option>
+													</select>
+													<button type="button" class="btn btn1 btn-success base-btn">审核成功</button>
+												</div>
+											</div>
+											<div role="tabpanel" class="tab-pane fade" id="faile" aria-labelledby="faile-tab">
+												<div class="container base-container">
+													<div class="alert alert-warning base-alert">
+														如果审核失败请在以下填写失败原因,系统会自动发送短信至该护工手机
+													</div>
+													<div class="alert alert-danger base-alert" id="nullAlert" style="display: none" role="alert"></div>
+													<textarea id="bustTextArea" class="form-control base-textara Xtextarea" rows="3" value="其他"></textarea>
+													<button type="button" class="btn btn2 btn-danger base-btn">审核失败</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal fade" id="outModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<div class="jumbotron">
+										<div class="container">
+											<h3>下架面板</h3>
+										</div>
+
+									</div>
+								</div>
+								<div class="modal-body">
+
+									<div class="bs-example bs-example-tabs">
+										<div class="container base-container">
+											<div class="alert alert-warning base-alert">
+												如果需要下架护工请在以下填写下架原因,系统会自动发送短信至该护工手机
+											</div>
+											<textarea id="outTextArea" class="form-control base-textara Xtextarea" rows="3"></textarea>
+											<button type="button" class="btn btn-danger base-btn Xbutton">下架护工</button>
+										</div>
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../scripts/lib/requirejs/require.js" data-main="../scripts/main-nurse.js" defer async="true"></script>
+
+	<!--<script src="../scripts/lib/jQuery/jquery.min.js"></script>-->
+	<!--<script src="../scripts/lib/bootstrap/bootstrap.min.js"></script>-->
+	<!--<script src="../scripts/lib/jQuery/jquery.cookie.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<!--<script src="../scripts/lib/jQuery/jquery.md5.js" type="text/javascript" charset="utf-8"></script>-->
+	<!--<script src="../scripts/lib/jQuery/jquery-time.js" type="text/javascript" charset="utf-8"></script>-->
+	<!--<script src="../scripts/lib/sweetalert/sweetalert-dev.js"></script>-->
+	<!--<script src="../scripts/lib/jQuery/remodal.js"></script>-->
+	<!--<script src="../scripts/lib/jQuery/upfile.js"></script>-->
+	<!--<script src="../scripts/app/nurse.js"></script>-->
+	<!--<script>-->
+	<!--$('#myTabs').click(function (e) {-->
+	<!--e.preventDefault()-->
+	<!--$(this).tab('show');-->
+	<!--});-->
+	<!--</script>-->
+
+</html>

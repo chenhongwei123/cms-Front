@@ -1,0 +1,53 @@
+.main-banner{
+    /*margin-left: 18%;*/
+    width: 93%;
+    overflow-x: auto;
+    z-index: -10000;
+    background-color: #EAEAEA;
+    /*position: relative;*/
+}
+
+#ctrl-img{
+    width: 100px;
+    height: 50px;
+}
+
+.addBanner{
+    color: white;
+    background-color: #18bc9c;
+    border: 1px solid #18bc9c;
+    width: 74px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.table{
+    overflow-x: auto;
+}
+
+.addBanner a{
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.file1{
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+#upload-img{
+    width: 200px;
+    height: 100px;
+}
+
+#url,#upload-img,#sort{
+    border: 1px solid #dce4ec;
+    border-radius: 5px;
+    width: 247.5px;
+}
+
+#url,#sort{
+    height: 45px;
+    font-size: 15px;
+}

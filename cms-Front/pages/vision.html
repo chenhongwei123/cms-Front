@@ -1,0 +1,402 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>版本管理</title>
+		<link href="../styles/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="../styles/base.css" rel="stylesheet">
+		<link href="../styles/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="../styles/dish-style.css" rel="stylesheet">
+		<link href="../styles/version-style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--创建导航条-->
+		<nav class="cms-navbar navbar navbar-fixed-top navbar-inverse navbar-styles" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand cms-font" href="index.html">鸿安CMS系统</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<p class="navbar-text">你好<span class="admin-name">admin</span></p>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">个人中心</a>
+								</li>
+								<li>
+									<a href="#">权限配置</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a class="logout">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+			<div class="cms-shadow"></div>
+		</nav>
+
+		<!--创建底部-->
+		<div class="container-fluid ">
+			<div class="row">
+				<!--创建侧边栏-->
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar ul-style">
+						<li class="active">
+
+							<a href="dish.html">
+								<img src="../images/dishmin.png">
+								<span class="text">菜品管理</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="banner.html">
+								<img src="../images/banner.png">
+								<span class="text">Banner管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="shop.html">
+								<img src="../images/shopMini.png">
+								<span class="text">商户认证</span>
+							</a>
+						</li>
+						<li class="active" style="background-color: #b4bcc2;">
+							<a href="vision.html">
+								<img src="../images/visionMini.png">
+								<span class="text">版本管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activity.html">
+								<img src="../images/actMin.png">
+								<span class="text">充送活动</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="user.html">
+								<img src="../images/userMin.png">
+								<span class="text">用户管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="order.html">
+								<img src="../images/orderMin.png">
+								<span class="text">食堂订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurseOrders.html">
+								<img src="../images/nurseOrdersMin.png">
+								<span class="text cms-font">护理订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurse.html">
+								<img src="../images/nurseMin.png">
+								<span class="text">护工认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activityReleased.html">
+								<img src="../images/discountMini.png">
+								<span class="text cms-font">活动发布</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="updateDoctor.html">
+								<img src="../images/updateDoctorMini.png">
+								<span class="text cms-font">修改护理项目</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="customer.html">
+								<img src="../images/customerMini.png">
+								<span class="text cms-font">浏览反馈</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="skill.html">
+								<img src="../images/dishmin.png">
+								<span class="text cms-font">服务技能</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="hint.html">
+								<img src="../images/wenxinx.png">
+								<span class="text cms-font">温馨提示</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="healthTypes.html">
+								<img src="../images/healthMin.png">
+								<span class="text cms-font">健康报告类型</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="Item.html">
+								<img src="../images/ItemMin.png">
+								<span class="text cms-font">健康报告条目</span>
+							</a>
+
+						</li>
+						
+						<li class="active">
+							<a href="healthProducts.html">
+								<img src="../images/baojianpingMin.png">
+								<span class="text cms-font">保健品品牌</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="healthKind.html">
+								<img src="../images/bjpMin.png">
+								<span class="text cms-font">保健品种类</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="supplys.html">
+								<img src="../images/supplysMin.png">
+								<span class="text cms-font">供应商</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="bourn.html">
+								<img src="../images/bournMin.png">
+								<span class="text cms-font">旅行目的地</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="message.html">
+								<img src="../images/messageMin.png">
+								<span class="text cms-font">短信群发</span>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--创建操作面板-->
+			<div class="col-sm-9 col-md-10 col-sm-offset-3 col-md-offset-2 main main-console">
+				<!--当前位置显示-->
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header h3-style">
+                    <img src="../images/visionMax.png">
+                    <a href="vision.html">版本管理</a>
+                </h3>
+						<ol class="breadcrumb breadcrumb-bg">
+							<li>
+								<img src="../images/web.png">
+								<span>Home</span>
+							</li>
+							<li>
+								<img src="../images/visionMini.png">
+								<span>版本管理</span>
+							</li>
+
+						</ol>
+					</div>
+				</div>
+				<!--表格显示-->
+				<div class="row">
+					<div class="col-md-12">
+						<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModal">添加条目</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-hover cms-table">
+							<thead>
+								<tr>
+									<th>id</th>
+									<th>版本号</th>
+									<th>类型</th>
+									<th>地址</th>
+									<th>描述</th>
+									<th>是否强制升级</th>
+									<th>创建时间</th>
+									<th>修改时间</th>
+									<th>操作</th>
+									<th>删除</th>
+								</tr>
+							</thead>
+							<tbody id="tbody1">
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!--创建模态框-->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="jumbotron">
+								<div class="container">
+									<h3>新增版本</h3>
+								</div>
+							</div>
+						</div>
+						<div class="modal-body">
+							<!--模态框显示内容-->
+							<div class="container">
+								<!--版本类型-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="select">类型</label>
+										</div>
+										<div class="col-sm-6">
+											<select class="form-control" name="typeSelect" id="select">
+												<option>用户</option>
+												<option>商户</option>
+												<option>护工</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--版本号-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="version">版本号</label>
+										</div>
+										<div class="col-sm-6">
+											<input type="text" id="version">
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--是否强制升级-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="version">是否强制升级</label>
+										</div>
+										<div class="col-sm-6">
+											<!-- <input type="text" id="upgrade">-->
+											<select class="select1 stateSelect select" id="upgrade">
+												<!--  <option>点击下拉显示需要搜索的类型</option>-->
+												<option>0-否</option>
+												<option>1-是</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--下载地址-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="app-url">APP下载地址</label>
+										</div>
+										<div class="col-sm-6">
+											<input type="text" id="app-url">
+											<span id="errinfo-url"></span>
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--描述-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="descs">APP描述</label>
+										</div>
+										<div class="col-sm-6">
+											<textarea id="descs" type="text" class="form-control" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+							<button type="button" class="btn btn-primary add-version">
+                        提交添加
+                    </button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+			</div>
+
+			<!--创建模态栏-->
+			<div class="modal fade" id="myModalx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="jumbotron">
+								<div class="container">
+									<h3>是否删除</h3>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+							<button type="submit" class="btn btn-primary delete-activity">
+                                                                 删除
+                    </button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+			</div>
+		</div>
+	</body>
+	<script src="../scripts/lib/requirejs/require.js" data-main="../scripts/main-vision.js" defer async="true"></script>
+
+</html>

@@ -1,0 +1,186 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>添加护工</title>
+    <link href="../styles/material/materialize.min.css" rel="stylesheet">
+    <link href="../styles/cms-regNurse.css" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper cms-reg-logo">
+        <div class="container ">
+            <a href="#" class="brand-logo">添加护工</a>
+        </div>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="nurse.html">回到护工页面</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="cms-shadow"></div>
+<div class="container cms-regnurse-container">
+    <div class="col s12">
+        <p class="cms-baseinfo">护工基础信息</p>
+    </div>
+    <br/>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s3">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">姓名</label>
+                </div>
+                <div class="input-field col s3">
+                    <input id="mobile" type="text" class="validate">
+                    <label for="mobile">手机号</label>
+                </div>
+                <div class="input-field col s3">
+                    <input id="birthplace" type="text" class="validate">
+                    <label for="birthplace">籍贯</label>
+                </div>
+                <div class="input-field col s3">
+                    <input id="address" type="text" class="validate">
+                    <label for="address">地址</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field cms-input-box col s6">
+                <select class="browser-default cms-nurse-select" id="sex">
+                    <option value="" disabled selected>选择性别</option>
+                    <option value="1">女</option>
+                    <option value="2">男</option>
+                </select>
+                </div>
+                <div class="col 6">
+                    <div class="col 6">
+                        <label for="cms-nurse-logo">上传头像</label>
+                    </div>
+                    <div class="col 6">
+                        <img id="cms-nurse-logo"/>
+                        <input type="file" class="file1"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">介绍一下自己吧</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col s12">
+        <p class="cms-baseinfo">护工业务信息</p>
+    </div>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s3">
+                    <select class="browser-default cms-time">
+                        <option value="" disabled selected>选择服务时间类型</option>
+                        <option value="1">全天</option>
+                        <option value="2">钟点</option>
+                    </select>
+                </div>
+                <div class="input-field col s3">
+                    <input id="years" type="text" class="validate">
+                    <label for="years">工作年限</label>
+                </div>
+                <div class="input-field col s3">
+                    <input id="bank" type="text" class="validate">
+                    <label for="bank">开户行</label>
+                </div>
+                <div class="input-field col s3">
+                    <input id="area" type="text" class="validate">
+                    <label for="area">服务区域</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4">
+                    <input id="sn" type="text" class="validate">
+                    <label for="sn">身份证号</label>
+                </div>
+                <div class="input-field col s4">
+                    <input id="card" type="text" class="validate">
+                    <label for="card">银行卡号</label>
+                </div>
+                <div class="input-field col s4">
+                    <select class="browser-default cms-nurse-type">
+                        <option value="" disabled selected>选择服务类型</option>
+                        <option value="1">护工</option>
+                        <option value="2">康复师</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col 6">
+                    <div class="col 6">
+                        <label for="cms-positiveImg-img">身份证正面</label>
+                    </div>
+                    <div class="col 4">
+                        <img id="cms-positiveImg-img"  class="cms-upload-img" />
+                        <input type="file" class="cms-positiveImg"  />
+                    </div>
+                </div>
+                <div class="col 6">
+                    <div class="col 6">
+                        <label for="cms-obverseImg-img">身份证反面</label>
+                    </div>
+                    <div class="col 6">
+                        <img id="cms-obverseImg-img"  class="cms-upload-img" />
+                        <input type="file" class="cms-obverseImg"  />
+                    </div>
+                </div>
+                <div class="col 6">
+                    <div class="col 6">
+                        <label for="cms-licenseImg-img">资格证上传</label>
+                    </div>
+                    <div class="col 6">
+                        <img id="cms-licenseImg-img"  class="cms-upload-img" />
+                        <input type="file" class="cms-licenseImg"  />
+                    </div>
+                </div>
+                <div class="col 6">
+                    <a class="waves-effect waves-light btn cms-reg-add">添加</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script src="../scripts/lib/jQuery/jquery.min.js"></script>
+<script src="../scripts/lib/material/materialize.min.js"></script>
+<script src="../scripts/lib/jQuery/jquery.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../scripts/lib/jQuery/jquery.md5.js" type="text/javascript" charset="utf-8"></script>
+<script src="../scripts/lib/jQuery/jquery-time.js" type="text/javascript" charset="utf-8"></script>
+<script src="../scripts/lib/jQuery/upfile.js" type="text/javascript" charset="utf-8"></script>
+<script src="../scripts/lib/sweetalert/sweetalert-dev.js"></script>
+<script src="../scripts/app/regNurse.js"></script>
+</html>

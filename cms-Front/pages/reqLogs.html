@@ -1,0 +1,511 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>请求日志</title>
+		<link href="../styles/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="../styles/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="../styles/base.css" rel="stylesheet">
+		<style>
+			.save-update .shop-update {
+				width: 50px;
+				text-align: center;
+				border: 1px solid #18BC9C;
+				text-decoration: none;
+			}
+			
+			.save-update .shop-save {
+				width: 50px;
+				border: 1px solid #EB65AE;
+				color: #EB65AE;
+				text-decoration: none;
+				text-align: center;
+				display: none;
+			}
+			
+			.main-console {
+				background-color: #EAEAEA;
+			}
+			
+			textarea {
+				border-radius: 5px;
+				border: 2px solid #dce4ec;
+			}
+			
+			.xx {
+				margin-left: 90%;
+				width: 25px;
+				height: 25px;
+				cursor: pointer;
+			}
+			
+			.adddishesUl li img {
+				width: 200px;
+				height: 100px;
+			}
+			
+			.adddishesUl li {
+				padding: 0 10px;
+				line-height: 66px;
+				padding-left: 60px;
+				text-align: left;
+			}
+			
+			.adddishesUl li span {
+				display: inline-block;
+				width: 100px;
+				text-align: left;
+				font-size: 16px;
+				font-weight: 900;
+			}
+			
+			.adddishesUl li .vTop {
+				vertical-align: top;
+			}
+			
+			.adddishesUl li input[type="text"] {
+				height: 43px;
+				width: 352px;
+				font-size: 16px;
+				text-indent: 6px;
+			}
+			
+			table input {
+				border: none;
+			}
+			
+			table select {
+				border: none;
+			}
+			
+			table .file {
+				display: none;
+			}
+			
+			table {
+				position: relative;
+			}
+			
+			.box1 {
+				border-radius: 5px;
+				margin-top: -3%;
+				width: 50%;
+				height: 700px;
+				overflow: auto;
+				display: none;
+				position: fixed;
+				left: 25%;
+				top: 10%;
+				background-color: #ffffff;
+				z-index: 10000;
+			}
+			
+			.info {
+				background-color: rgb(0, 0, 0);
+				filter: alpha(opacity=60);
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+			
+			.cover1 {
+				position: fixed;
+				z-index: 9999;
+				top: 0;
+				left: 0;
+				display: none;
+				width: 100%;
+				height: 100%;
+				opacity: 0.8;
+				background: #000 none repeat scroll 0% 0%;
+			}
+			/*textarea{*/
+			/*max-width: 100px;*/
+			/*max-height: 70px;*/
+			/*min-width: 352px;*/
+			/*min-height: 100px;*/
+			/*line-height: 24px;*/
+			/*font-size: 14px;*/
+			/*!*margin-left: 7px;*!*/
+			/*padding: 10px;*/
+			/*}*/
+			
+			fieldset {
+				display: block;
+				-webkit-margin-start: 2px;
+				-webkit-margin-end: 2px;
+				-webkit-padding-before: 0.35em;
+				-webkit-padding-start: 0.75em;
+				-webkit-padding-end: 0.75em;
+				-webkit-padding-after: 0.625em;
+				min-width: -webkit-min-content;
+				border-width: 2px;
+				border-style: groove;
+				border-color: threedface;
+				border-image: initial;
+			}
+			
+			legend {
+				display: block;
+				-webkit-padding-start: 2px;
+				-webkit-padding-end: 2px;
+				border-width: initial;
+				border-style: none;
+				border-color: initial;
+				border-image: initial;
+				width: 5%;
+			}
+			
+			label {
+				margin-left: 3%;
+			}
+			
+			.bixuan {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--创建导航条-->
+		<nav class="cms-navbar navbar navbar-fixed-top navbar-inverse navbar-styles" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand cms-font" href="index.html">鸿安CMS系统</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<p class="navbar-text">你好<span class="admin-name">admin</span></p>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">个人中心</a>
+								</li>
+								<li>
+									<a href="#">权限配置</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a class="logout">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+			<div class="cms-shadow"></div>
+		</nav>
+
+		<!--创建底部-->
+		<div class="container-fluid ">
+			<div class="row">
+				<!--创建侧边栏-->
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar ul-style">
+						<li class="active">
+
+							<a href="dish.html">
+								<img src="../images/dishmin.png">
+								<span class="text">菜品管理</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="banner.html">
+								<img src="../images/banner.png">
+								<span class="text">Banner管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="shop.html">
+								<img src="../images/shopMini.png">
+								<span class="text">商户认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="vision.html">
+								<img src="../images/visionMini.png">
+								<span class="text">版本管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activity.html">
+								<img src="../images/actMin.png">
+								<span class="text">充送活动</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="user.html">
+								<img src="../images/userMin.png">
+								<span class="text">用户管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="order.html">
+								<img src="../images/orderMin.png">
+								<span class="text">食堂订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurseOrders.html">
+								<img src="../images/nurseOrdersMin.png">
+								<span class="text cms-font">护理订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurse.html">
+								<img src="../images/nurseMin.png">
+								<span class="text">护工认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activityReleased.html">
+								<img src="../images/discountMini.png">
+								<span class="text cms-font">活动发布</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="updateDoctor.html">
+								<img src="../images/updateDoctorMini.png">
+								<span class="text cms-font">修改护理项目</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="customer.html">
+								<img src="../images/customerMini.png">
+								<span class="text cms-font">浏览反馈</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="reqLogs.html">
+								<img src="../images/logMin.png">
+								<span class="text cms-font">请求日志</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="skill.html">
+								<img src="../images/dishmin.png">
+								<span class="text cms-font">服务技能</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="hint.html">
+								<img src="../images/wenxinx.png">
+								<span class="text cms-font">温馨提示</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="healthTypes.html">
+								<img src="../images/healthMin.png">
+								<span class="text cms-font">健康报告类型</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="Item.html">
+								<img src="../images/ItemMin.png">
+								<span class="text cms-font">健康报告条目</span>
+							</a>
+
+						</li>
+						
+						<li class="active">
+							<a href="healthProducts.html">
+								<img src="../images/baojianpingMin.png">
+								<span class="text cms-font">保健品品牌</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="healthKind.html">
+								<img src="../images/bjpMin.png">
+								<span class="text cms-font">保健品种类</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="supplys.html">
+								<img src="../images/supplysMin.png">
+								<span class="text cms-font">供应商</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="bourn.html">
+								<img src="../images/bournMin.png">
+								<span class="text cms-font">旅行目的地</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="message.html">
+								<img src="../images/messageMin.png">
+								<span class="text cms-font">短信群发</span>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--创建操作面板-->
+			<div class="col-sm-9 col-md-10 col-sm-offset-3 col-md-offset-2 main-console">
+				<div style="display: block;" id="cover">
+
+				</div>
+
+				<!--当前位置显示-->
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header h3-style">
+                    <img src="../images/logMax.png">
+                    <a href="reqLogs.html">请求日志</a>
+                </h3>
+						<ol class="breadcrumb breadcrumb-bg">
+							<li>
+								<img src="../images/web.png">
+								<span>Home</span>
+							</li>
+							<li>
+								<img src="../images/logMin.png">
+								<span>请求日志</span>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!--表格显示-->
+				<div class="row">
+
+					<form class="searchBox">
+
+						<fieldset>
+							<legend>搜索</legend>
+							<!--<label>姓名:</label><input/>
+                <label>姓名:</label><input/>-->
+							<label>服务平台:</label>
+							<select class="select1">
+								<option>点击下拉显示搜索的服务平台</option>
+								<option>0-商户服务</option>
+								<option>1-用户服务</option>
+								<option>2-运营服务</option>
+							</select><span class="bixuan">*必选</span>
+							<label>服务环境:</label>
+							<select class="select2">
+								<option>点击下拉显示搜索的服务环境</option>
+								<option>0-开发</option>
+								<option>1-测试</option>
+								<option>2-生产</option>
+							</select><span class="bixuan">*必选</span>
+							<label>客户端类型:</label>
+							<select class="select3">
+								<option>点击下拉显示搜索的客户端类型</option>
+								<option>0-未知</option>
+								<option>1-ios</option>
+								<option>2-android</option>
+								<option>3-web</option>
+							</select><span class="bixuan">*必选</span>
+							<br /><br />
+							<label>客户端IP地址:</label>
+							<input type="text" class="wd" name="wd" placeholder="精确输入要搜索的客户端IP地址" />
+							<label>响应结果码:</label>
+							<input type="text" class="wd2" name="wd2" placeholder="精确输入要搜索的响应结果码" />
+							<br /><br />
+							<label>返回结果内容:</label>
+							<input type="text" class="wd3" name="wd3" placeholder="请输入要搜索的返回结果内容" />
+							<label>请求对应方法:</label>
+							<input type="text" class="wd4" name="wd4" placeholder="请输入要搜索的请求对应方法" />
+							<label>请求参数内容:</label>
+							<input type="text" class="wd5" name="wd5" placeholder="请输入要搜索的请求参数内容" />
+							<br /><br />
+							<label></label>
+							<input type="button" id="searchOrder" value="搜索" />
+							<br /><br />
+
+						</fieldset>
+						<p>共<span style="color: blue;" class="datax"></span>条数据</p>
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-hover cms-table">
+							<thead>
+								<tr>
+									<th>日志数据id</th>
+									<th>用户id</th>
+									<th>请求服务</th>
+									<th>请求环境</th>
+									<th>请求系统</th>
+									<th>客户端的IP地址</th>
+									<th>方法名</th>
+									<th>请求时间</th>
+									<th>请求参数</th>
+									<th>响应结果</th>
+									<th>响应结果码</th>
+									<th>响应时间</th>
+
+									<th>日志时间</th>
+								</tr>
+							</thead>
+							<tbody id="tbody1">
+
+							</tbody>
+						</table>
+						<div id="Paging">
+							<input type="button" id="PrevPage" value="上一页" />
+							<input type="button" id="NextPage" value="下一页">
+							<input type="text" value="0" style="display: none;" id="dishpageval" />
+							<div id="pagination" style="text-align: center;">
+								<span>第</span>
+								<b id="change1">1</b>
+								<span>页</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+	<script src="../scripts/lib/jQuery/jquery.min.js"></script>
+	<script src="../scripts/lib/bootstrap/bootstrap.min.js"></script>
+	<script src="../scripts/lib/jQuery/jquery.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/jQuery/jquery.md5.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/jQuery/jquery-time.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/sweetalert/sweetalert-dev.js"></script>
+	<script src="../scripts/app/reqLog.js"></script>
+
+</html>

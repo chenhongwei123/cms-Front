@@ -1,0 +1,331 @@
+/**设置字体**/
+@font-face {
+    font-family: NotoSans-Regular;
+    src: url('../fonts/NotoSans-Regular.ttf');
+}
+
+a,p,h1,h2,h3,h4,h5,b,small{
+    font-family: NotoSans-Regular;
+}
+
+/**设置页面的整体字体**/
+.cms-font{
+    font-family: NotoSans-Regular;
+}
+
+/**设置顶部背景**/
+.cms-navbar{
+    background-color: #009688;
+}
+
+/**设置顶部阴影**/
+.cms-shadow{
+    /*background-image: url("../images/shadow.png");*/
+    background-repeat: repeat-x;
+    background-size: 1px 12px;
+    height: 5px;
+    background: linear-gradient(#B3B3B3,#DDDDDD);
+    background: -webkit-linear-gradient(#B3B3B3,#DDDDDD);
+}
+
+
+/**设置侧边栏样式**/
+.nav .active{
+    transition: all .3s;
+    border-right: 4px solid #009688;
+    /*background: #80CBC4;*/
+}
+
+.nav .active a:hover{
+    transition: all .3s;
+    border-right: 4px solid #009688;
+    /*background: #80CBC4;*/
+}
+
+
+.selected{
+    background: red;
+}
+
+/**设置操作面板背景**/
+.main-index{
+    background-color: #EAEAEA;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+
+/**设置面包导航样式**/
+.cms-breadcrub{
+    background-color: #EEEEEE;
+    /*color: #F95658;*/
+}
+
+
+/**工作面板显示类别**/
+.h3-style{
+    color: #18BC9C;
+}
+
+/**表格分割线**/
+tbody tr{
+    border-top: 1px solid rgba(158, 158, 158, 0.17);
+}
+
+.text{
+    color: #009688;
+    font-size: 13px;
+    margin-left: 10%;
+}
+
+
+
+
+/**设置操作面板的样式**/
+.main-console{
+    position: absolute;
+    overflow-x: auto;
+    width: 93%;
+    height: 100%;
+    left: -8%;
+    padding: 40px;
+}
+
+/**面包导航**/
+.breadcrumb{
+    height: 34px;
+    position: relative;
+    margin: 0 0 19px 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+/**超链接**/
+a{
+    text-decoration: none;
+}
+
+
+.ul-style{
+    margin-top: 10%;
+}
+
+
+/**ul的hover动画**/
+.ul-style li > a:hover{
+    color: black;
+}
+
+
+
+/**弹性图片大小设置**/
+#flexible-img{
+    max-width: 100px;
+    max-height: 80px;
+}
+
+/**下拉框美化**/
+.stateSelect{
+    height: 40px;
+    border: 1px solid white;
+    font-size: 10px;
+    background: #1BBC9D;
+    color: white;
+}
+
+
+/**按钮样式**/
+.a1,.a4{
+    border-radius: 2px;
+    border: 1px solid #18BC9C;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+
+.a1:hover,.a2:hover,.a4:hover{
+    border: 1px solid white;
+    background: #18BC9C;
+    color: white;
+}
+
+
+.a2{
+    display: none;
+    cursor: pointer;
+   /* border: 1px solid #EB65AE;*/
+    border-radius: 2px;
+    color: #18BC9C;
+    text-align: center;
+}
+
+/*.a2:hover{
+    border: 1px solid white;
+    background: #EB65AE;
+    color: white;
+}*/
+
+.a3{
+    display: block;
+    cursor: pointer;
+    border: 1px solid #18BC9C;
+    border-radius: 2px;
+    text-align: center;
+    background: #009688;
+    color: #ecf0f1;
+}
+
+.a3:hover{
+    border: 1px solid white;
+    background: #18BC9C;
+    color: white;
+}
+
+
+.nav-sidebar{
+    margin-right: -21px;
+    margin-bottom: 60px;
+    margin-left: -20px;
+}
+
+
+/**遮罩层关闭按钮位置**/
+.xx {
+    margin-left: 90%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/**li样式**/
+
+ul li{
+    list-style: none;
+}
+
+/**Modal样式**/
+.base-container{
+    width: 598px;
+}
+
+.base-size{
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.base-btn{
+    position: relative;
+    margin-top: 3%;
+    margin-left: 25%;
+    width: 284px;
+}
+
+.base-alert{
+    margin-top: 3%;
+    margin-left: -2%;
+    width: 558px;
+}
+
+.base-textara{
+    margin-left: 18%;
+    width: 558px;
+}
+
+.cms-table{
+    background: white;
+    /*border-radius: 1%;*/
+    /*color: #00a1cb;*/
+    color: black;
+    /*border: 2px solid white;*/
+
+}
+
+/**没有数据时候显示的内容**/
+.noData{
+    margin: auto 40%;
+    padding: 2%;
+    font-size: 20px;
+    text-align: center;
+    color: gray;
+}
+
+.goActivityList{
+    /*top: -5px;*/
+    display: inline-block;
+    width: 120px;
+    height: 45px;
+    border: 1px solid #95A5A6;
+    text-align: center;
+}
+
+.btn-goActivityList{
+    border-radius: 4px;
+    color: white;
+    background: #95A5A6;
+    padding: 10px 11px;
+}
+
+.btn-goActivityList:hover, .btn-goActivityList:focus, .btn-goActivityList.focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+thead{
+    background: #009688;
+    color: white;
+}
+
+/*
+ *响应式设计
+**/
+@media screen and (max-width: 2000px) {
+    .sidebar{
+        float: left;
+        position: fixed;
+        top: 60px;
+        width: 10%;
+        height: 100%;
+        overflow:hidden;
+        background-color: #F5F5F5;
+        z-index: 100;
+    }
+}
+
+.main-console{
+    background: #EAEAEA;
+}
+
+@media screen and (max-width: 2000px) {
+    /**侧边栏尺寸设置**/
+    .sidebar{
+        float: left;
+        position: fixed;
+        top: 60px;
+        width: 11%;
+        height: 100%;
+        overflow:hidden;
+        background-color: #F5F5F5;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    /**侧边栏尺寸设置**/
+    .sidebar{
+        float: left;
+        position: fixed;
+        top: 60px;
+        width: 10%;
+        height: 100%;
+        overflow:auto;
+        background-color: #F5F5F5;
+        z-index: 100;
+    }
+}
+
+table a:not(.btn), .table a:not(.btn){
+    text-decoration: none;
+    cursor: pointer;
+}

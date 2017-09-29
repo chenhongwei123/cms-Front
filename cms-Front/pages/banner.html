@@ -1,0 +1,433 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>banner管理</title>
+		<link href="../styles/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="../styles/base.css" rel="stylesheet">
+		<!--<link href="../styles/dish-style.css" rel="stylesheet">-->
+		<link href="../styles/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="../styles/bannser-style.css" rel="stylesheet">
+		<!--<link rel="stylesheet" type="text/css" href="../styles/PCreset.css"/>-->
+		<!--<link rel="stylesheet" type="text/css" href="../styles/remodal.css"/>-->
+		<!--<link rel="stylesheet" type="text/css" href="../styles/remodal-default-theme.css"/>-->
+
+	</head>
+
+	<body>
+		<!--创建导航条-->
+		<nav class="cms-navbar navbar navbar-fixed-top navbar-inverse navbar-styles" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand cms-font" href="../pages/index.html">鸿安CMS系统</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<p class="navbar-text">你好<span class="admin-name">admin</span></p>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">个人中心</a>
+								</li>
+								<li>
+									<a href="#">权限配置</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a class="logout">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+			<div class="cms-shadow"></div>
+		</nav>
+
+		<!--创建底部-->
+		<div class="container-fluid ">
+			<div class="row">
+				<!--创建侧边栏-->
+				<div class="col-sm-3 col-md-2 sidebar sidebar-banner">
+					<ul class="nav nav-sidebar ul-style">
+						<li class="active">
+
+							<a href="../pages/dish.html">
+								<img src="../images/dishmin.png">
+								<span class="text">菜品管理</span>
+							</a>
+
+						</li>
+						<li class="active" style="background-color: #b4bcc2;">
+							<a href="banner.html">
+								<img src="../images/banner.png">
+								<span class="text">Banner管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/shop.html">
+								<img src="../images/shopMini.png">
+								<span class="text">商户认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/vision.html">
+								<img src="../images/visionMini.png">
+								<span class="text">版本管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/activity.html">
+								<img src="../images/actMin.png">
+								<span class="text">充送活动</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/user.html">
+								<img src="../images/userMin.png">
+								<span class="text">用户管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/order.html">
+								<img src="../images/orderMin.png">
+								<span class="text">食堂订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurseOrders.html">
+								<img src="../images/nurseOrdersMin.png">
+								<span class="text cms-font">护理订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/nurse.html">
+								<img src="../images/nurseMin.png">
+								<span class="text">护工认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/activityReleased.html">
+								<img src="../images/discountMini.png">
+								<span class="text cms-font">活动发布</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/updateDoctor.html">
+								<img src="../images/updateDoctorMini.png">
+								<span class="text cms-font">修改护理项目</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="../pages/customer.html">
+								<img src="../images/customerMini.png">
+								<span class="text cms-font">浏览反馈</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="skill.html">
+								<img src="../images/dishmin.png">
+								<span class="text cms-font">服务技能</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="hint.html">
+								<img src="../images/wenxinx.png">
+								<span class="text cms-font">温馨提示</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="healthTypes.html">
+								<img src="../images/healthMin.png">
+								<span class="text cms-font">健康报告类型</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="Item.html">
+								<img src="../images/ItemMin.png">
+								<span class="text cms-font">健康报告条目</span>
+							</a>
+
+						</li>
+						
+						<li class="active">
+							<a href="healthProducts.html">
+								<img src="../images/baojianpingMin.png">
+								<span class="text cms-font">保健品品牌</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="healthKind.html">
+								<img src="../images/bjpMin.png">
+								<span class="text cms-font">保健品种类</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="supplys.html">
+								<img src="../images/supplysMin.png">
+								<span class="text cms-font">供应商</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="bourn.html">
+								<img src="../images/bournMin.png">
+								<span class="text cms-font">旅行目的地</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="message.html">
+								<img src="../images/messageMin.png">
+								<span class="text cms-font">短信群发</span>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--创建操作面板-->
+			<div class="col-sm-9 col-md-10 col-sm-offset-3 col-md-offset-2 main-console main-banner">
+				<!--当前位置显示-->
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header h3-style">
+                    <img src="../images/bannerMax.png">
+                    <a href="banner.html">Banner管理</a>
+                </h3>
+						<ol class="breadcrumb breadcrumb-bg">
+							<li>
+								<img src="../images/web.png">
+								<span>Home</span>
+							</li>
+							<li>
+								<img src="../images/banner.png">
+								<span>Banner管理</span>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!--表格显示-->
+				<div class="row">
+					<!--<div class="col-md-12">-->
+					<!--<h4 class="addBanner" ><a href="#modal">新增banner</a></h4>-->
+					<!--</div>-->
+					<div class="col-md-12">
+						<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModal">添加条目</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-hover cms-table">
+							<thead>
+								<th>id</th>
+								<th>活动类型</th>
+								<th>图片</th>
+								<th>排序值</th>
+								<th>所属平台</th>
+								<th>URL</th>
+								<th>banne位置</th>
+								<th>创建时间</th>
+								<th>更新时间</th>
+								<th>操作</th>
+								<th>删除</th>
+							</thead>
+							<tbody id="tbody1">
+
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+
+			<!--创建模态栏-->
+			<div class="modal fade" id="myModalx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="jumbotron">
+								<div class="container">
+									<h3>是否删除</h3>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+							<button type="submit" class="btn btn-primary delete-activity">
+                                                                 删除
+                    </button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+			</div>
+
+			<!--创建模态栏-->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="jumbotron">
+								<div class="container">
+									<h3>新增Banner</h3>
+								</div>
+							</div>
+						</div>
+						<div class="modal-body">
+							<!--模态框显示内容-->
+							<div class="container">
+								<!--版本类型-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="type">类型</label>
+										</div>
+										<div class="col-sm-6">
+											<select class="form-control" name="typeSelect" id="type">
+												<option>1-充值优惠</option>
+												<option>2-跳转官网</option>
+												<option>3-跳转商户</option>
+												<!--2-->
+											</select>
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--版本号-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="upload-img">图片</label>
+										</div>
+										<div class="col-sm-6">
+											<img id="upload-img" />
+											<input type="file" class="file1" />
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--下载地址-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="sort">排序值</label>
+										</div>
+										<div class="col-sm-6">
+											<input type="text" id="sort">
+											<span id="errinfo-url"></span>
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--描述-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="kind">所属平台</label>
+										</div>
+										<div class="col-sm-6">
+											<select class="form-control" name="typeSelect" id="kind">
+												<option>1-护工平台</option>
+												<option>2-用户app</option>
+												<option>3-订餐商户平台</option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="kind">banner位置</label>
+										</div>
+										<div class="col-sm-6">
+											<select id="banner">
+												<option>1-首页</option>
+												<option>2-餐饮业务</option>
+												<option>3-护理业务</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--url-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-6">
+											<label for="url">url</label>
+										</div>
+										<div class="col-sm-6">
+											<input type="text" id="url" placeholder="http://">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+							<button type="submit" class="btn btn-primary add-banner">
+                        提交添加
+                    </button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+			</div>
+		</div>
+	</body>
+	<script src="../scripts/lib/requirejs/require.js" data-main="../scripts/main-banner.js" defer async="true"></script>
+	<!--<script src="../scripts/lib/jQuery/jquery.min.js"></script>-->
+	<!--<script src="../scripts/lib/bootstrap/bootstrap.min.js"></script>-->
+	<!--<script src="../scripts/lib/jQuery/jquery.cookie.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<!--&lt;!&ndash;<script src="../scripts/lib/jQuery/jquery.md5.js" type="text/javascript" charset="utf-8"></script>&ndash;&gt;-->
+	<!--<script src="../scripts/lib/jQuery/jquery-time.js" type="text/javascript" charset="utf-8"></script>-->
+	<!--<script src="../scripts/lib/jQuery/remodal.js" type="text/javascript" charset="utf-8"></script>-->
+	<!--<script src="../scripts/lib/jQuery/upfile.js" type="text/javascript" charset="utf-8"></script>-->
+	<!--<script src="../scripts/lib/sweetalert/sweetalert-dev.js"></script>-->
+	<!--<script src="../scripts/app/banner.js"></script>-->
+
+</html>

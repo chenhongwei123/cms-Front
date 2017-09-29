@@ -1,0 +1,193 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>创建活动</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href="../styles/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="../styles/flatui/flat-ui.min.css" rel="stylesheet">
+		<link href="../styles/animate.css" rel="stylesheet">
+		<link href="../styles/cms-activity.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="jumbotron cms-jumbotron">
+			<div id="returnImg">
+				<img class="fadeImg" src="../images/return1.png">
+				<a href="activityReleased.html"><span class="fadeInRight">返回控制台</span></a>
+			</div>
+			<div id="goActivityList">
+				<a href="ActivityList.html"><span class="fadeInRight">查看活动列表</span></a>
+				<img class="fadeImg" src="../images/go.png">
+			</div>
+			<div class="container cms-activity-container">
+				<h3>添加店铺活动</h3>
+				<p>店铺名称:<span class="getShopName"></span></p>
+				<p>配送费:<span class="getFare"></span> 元</p>
+				<p>起送价:<span class="getlowest"></span> 元&nbsp<span style="color: red">(起送价若为0则不能创建首单立减)</span></p>
+			</div>
+		</div>
+		<div style="display: block" class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+			<ul id="myTabs" class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active first-reduce">
+					<a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">发布首单立减活动</a>
+				</li>
+				<li role="presentation">
+					<a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">发布满减优惠活动</a>
+				</li>
+			</ul>
+			<!--发布首单立减-->
+			<div id="myTabContent" class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+					<div class="cms-activity-form">
+						<div class="row">
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="amount">立减额度</label>
+									<div class="col-sm-10">
+										<input class="form-control" type="text" id="amount" placeholder="填入精确到小数点后两位的数字">
+										<small class="prompt-info">注意:立减额度需要低于起送价</small>
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Banner图片</label>
+									<div class="col-sm-10">
+										<img id="cms-activity-banner" class="showImg" />
+										<input type="file" class="cms-createActivity-banner" />
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Banner位置</label>
+									<div class="col-sm-10">
+										<select class="select1 stateSelect select">
+											<!--  <option>点击下拉显示需要搜索的类型</option>-->
+											<option>1-首页</option>
+											<option>2-餐饮业务</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-3 control-label">是否免配送费</label>
+									<div class="col-sm-9">
+										<select class="select1 stateSelect select activityFree">
+											<!--  <option>点击下拉显示需要搜索的类型</option>-->
+											<option>是</option>
+											<option>否</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">备注</label>
+									<div class="col-sm-10">
+										<textarea id="remark" class="form-control" rows="3"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+							<!--	<div class="form-group">-->
+									<button type="button" class="btn btn-primary btn-cost">发布</button>
+							<!--	</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--满减优惠-->
+				<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+					<div class="cms-activity-form">
+						<div class="row">
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">满减优惠</label>
+									<div class="col-sm-10">
+										<input class="form-control" type="text" id="preferential-reduction" placeholder="20.00-10.00(表示满20减10)">
+										<small class="prompt-info">注意:格式如下:20.00-10.00;30.00-15.00,多个优惠使用英文分号隔开</small>
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Banner图片</label>
+									<div class="col-sm-10">
+										<img id="reductionBanner" class="showImg" />
+										<input type="file" id="cms-createActivity-banner" />
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Banner位置</label>
+									<div class="col-sm-10">
+										<select class="select1-re stateSelect select">
+											<!--  <option>点击下拉显示需要搜索的类型</option>-->
+											<option>1-首页</option>
+											<option>2-餐饮业务</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">备注</label>
+									<div class="col-sm-10">
+										<textarea class="form-control" id="remark2" rows="3"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="com-md-12">
+								<!--<div class="form-group">-->
+									<button type="button" class="btn btn-primary btn-reduction">发布</button>
+								<!--</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /example -->
+	</body>
+	<script src="../scripts/lib/jQuery/jquery.min.js"></script>
+	<script src="../scripts/lib/flatui/flat-ui.min.js"></script>
+	<script src="../scripts/lib/jQuery/jquery.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/jQuery/jquery-time.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/jQuery/upfile.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/sweetalert/sweetalert-dev.js"></script>
+	<script src="../scripts/app/createActivity.js"></script>
+	<script>
+		$('#myTabs').click(function(e) {
+			e.preventDefault()
+			$(this).tab('show');
+		});
+	</script>
+
+</html>

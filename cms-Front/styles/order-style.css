@@ -1,0 +1,49 @@
+.serch-input{
+    margin-top: -7%;
+    margin-left: 33%;
+}
+
+.wd{
+    width: 150px;
+    height: 40px;
+    margin-top: 3%;
+    margin-left: -20%;
+}
+
+@media screen and (max-width: 1280px) {
+    .wd{
+        width: 150px;
+        height: 40px;
+        margin-left: -3%;
+        margin-top: 0%;
+    }
+}
+
+@media screen and (min-width: 1903px) {
+    .wd{
+        width: 150px;
+        height: 40px;
+        margin-top: 3%;
+        margin-left: -20%;
+    }
+}
+
+.searchsub{
+    width: 144px;
+    height: 40px;
+}
+
+
+
+.sidebar{
+    width: 10%;
+}
+
+.main-order{
+    margin-left: 7%;
+    width: 95%;
+    overflow-x: auto;
+}
+
+
+

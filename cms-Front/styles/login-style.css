@@ -1,0 +1,71 @@
+/*登录样式*/
+
+@font-face {
+    font-family: NotoSans-Regular;
+    src: url('../fonts/NotoSans-Regular.ttf');
+}
+
+
+.wrap{
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+/*警告框*/
+.state{
+    display: none;
+}
+
+.cms-jumbotron{
+    background: #009688;
+    color: white;
+    font-family: NotoSans-Regular;
+    margin-bottom: 0px;
+}
+
+.cms-jumbotron p{
+    font-size: 35px;
+    font-weight: 400;
+    /*text-shadow: 5px 5px 20px #999999;*/
+}
+
+.cms-jumbotron small{
+    font-family:  NotoSans-Regular;
+    font-size: 15px;
+}
+
+.cms-shadow{
+    background-repeat: repeat-x;
+    background-size: 1px 12px;
+    height: 5px;
+    background: linear-gradient(#B3B3B3,#DDDDDD);
+    background: -webkit-linear-gradient(#B3B3B3,#DDDDDD);
+}
+
+.cms-label{
+    font-family: NotoSans-Regular;
+    font-size: 17px;
+}
+
+.cms-login{
+    margin-top: 5%;
+    width: 150px;
+    background: #4BAE4F;
+    border: 1px solid #4BAE4F;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    box-shadow: 0px 3px 10px #B3B3B3;
+}
+
+.cms-login:hover{
+    background: #009688;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.cms-input:-webkit-autofill{
+    box-shadow: 0 0 0 38px
+    white inset;
+}
+

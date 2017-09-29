@@ -1,0 +1,22 @@
+.form-style{
+    width: 510px;
+    /*margin-left: 3%;*/
+}
+
+#version{
+    width: 247.5px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #9A9A9A;
+}
+
+#app-url{
+    width: 247.5px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #9A9A9A;
+}
+
+.main-console{
+    background-color: #EAEAEA;
+}

@@ -1,0 +1,578 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>旅行目的地</title>
+		<link href="../styles/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="../styles/base.css" rel="stylesheet">
+		<!--<link href="../styles/dish-style.css" rel="stylesheet">-->
+		<link href="../styles/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="../styles/bannser-style.css" rel="stylesheet">
+		<style>
+			.save {
+				display: none;
+				cursor: pointer;
+				border: 1px solid #18BC9C;
+				border-radius: 2px;
+				text-align: center;
+			}
+			
+			.save:hover {
+				border: 1px solid white;
+				background: #18BC9C;
+				color: white;
+			}
+			
+			.upload-img {
+				width: 200px;
+				height: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.upfile {
+				position: relative;
+				width: 200px;
+				display: inline-block;
+				height: 100px;
+			}
+			
+			.upfile .fileimgAccount {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200px;
+				height: 100px;
+				border: 1px solid #d6d6d6;
+				text-align: center;
+				line-height: 100px;
+				display: inline-block;
+				color: #a5a5a5;
+				font-size: 40px;
+				vertical-align: middle;
+				background-color: #ffffff;
+			}
+			
+			input[type="file"] {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 100;
+				width: 100%;
+				height: 100%;
+				filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+				filter: alpha(opacity=0);
+				-moz-opacity: 0;
+				-khtml-opacity: 0;
+				opacity: 0;
+				background: none;
+				border: none;
+				cursor: pointer;
+			}
+			
+			.delete_img {
+				position: absolute;
+				top: 100px;
+				left: 74px;
+				font-size: 16px;
+				margin-left: 10px;
+				cursor: pointer;
+				color: brown;
+				display: none;
+			}
+			
+			.file1 {
+				margin-left: 0%;
+				margin-top: 0%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--创建导航条-->
+		<nav class="cms-navbar navbar navbar-fixed-top navbar-inverse navbar-styles" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand cms-font" href="index.html">鸿安CMS系统</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<p class="navbar-text">你好<span class="admin-name"></span></p>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">个人中心</a>
+								</li>
+								<li>
+									<a href="#">权限配置</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a class="logout">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+			<div class="cms-shadow"></div>
+		</nav>
+
+		<!--创建底部-->
+		<div class="container-fluid ">
+			<div class="row">
+				<!--创建侧边栏-->
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar ul-style">
+						<li class="active">
+
+							<a href="dish.html">
+								<img src="../images/dishmin.png">
+								<span class="text">菜品管理</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="banner.html">
+								<img src="../images/banner.png">
+								<span class="text">Banner管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="shop.html">
+								<img src="../images/shopMini.png">
+								<span class="text">商户认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="vision.html">
+								<img src="../images/visionMini.png">
+								<span class="text">版本管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activity.html">
+								<img src="../images/actMin.png">
+								<span class="text">充送活动</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="user.html">
+								<img src="../images/userMin.png">
+								<span class="text">用户管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="order.html">
+								<img src="../images/orderMin.png">
+								<span class="text">食堂订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurseOrders.html">
+								<img src="../images/nurseOrdersMin.png">
+								<span class="text cms-font">护理订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurse.html">
+								<img src="../images/nurseMin.png">
+								<span class="text">护工认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activityReleased.html">
+								<img src="../images/discountMini.png">
+								<span class="text cms-font">活动发布</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="updateDoctor.html">
+								<img src="../images/updateDoctorMini.png">
+								<span class="text cms-font">修改护理项目</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="customer.html">
+								<img src="../images/customerMini.png">
+								<span class="text cms-font">浏览反馈</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="skill.html">
+								<img src="../images/jinengx.png">
+								<span class="text cms-font">服务技能</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="hint.html">
+								<img src="../images/wenxinx.png">
+								<span class="text cms-font">温馨提示</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="healthTypes.html">
+								<img src="../images/healthMin.png">
+								<span class="text cms-font">健康报告类型</span>
+							</a>
+
+						</li>
+
+						<li class="active">
+							<a href="Item.html">
+								<img src="../images/ItemMin.png">
+								<span class="text cms-font">健康报告条目</span>
+							</a>
+
+						</li>
+
+						<li class="active">
+							<a href="healthProducts.html">
+								<img src="../images/baojianpingMin.png">
+								<span class="text cms-font">保健品品牌</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="healthKind.html">
+								<img src="../images/bjpMin.png">
+								<span class="text cms-font">保健品种类</span>
+							</a>
+
+						</li>
+
+						<li class="active">
+							<a href="supplys.html">
+								<img src="../images/supplysMin.png">
+								<span class="text cms-font">供应商</span>
+							</a>
+
+						</li>
+						<li class="active" style="background-color: #b4bcc2;">
+							<a href="bourn.html">
+								<img src="../images/bournMin.png">
+								<span class="text cms-font">旅行目的地</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="message.html">
+								<img src="../images/messageMin.png">
+								<span class="text cms-font">短信群发</span>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--创建操作面板-->
+			<div class="col-sm-9 col-md-10 col-sm-offset-3 col-md-offset-2 main main-console">
+				<!--当前位置显示-->
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header h3-style">
+                    <img src="../images/bournMax.png">
+                    <a href="bourn.html">旅行目的地</a>
+                </h3>
+						<ol class="breadcrumb breadcrumb-bg">
+							<li>
+								<img src="../images/web.png">
+								<span>Home</span>
+							</li>
+							<li>
+								<img src="../images/bournMin.png">
+								<span>旅行目的地</span>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!--表格显示-->
+				<div class="row">
+					<div class="col-md-12">
+						<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModal">添加条目</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-hover cms-table">
+							<thead>
+								<tr>
+									<th>id</th>
+									<th>亮点名称</th>
+									<th>目的地</th>
+									<th>图标</th>
+									<th>创建时间</th>
+									<th>更新时间</th>
+									<th>状态</th>
+									<th>操作</th>
+									<th>状态修改</th>
+								</tr>
+							</thead>
+							<tbody id="tbody1">
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!--创建模态框-->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="jumbotron">
+								<div class="container">
+									<h3>新增旅行目的地</h3>
+								</div>
+							</div>
+						</div>
+						<div class="modal-body">
+							<!--模态框显示内容-->
+							<div class="container">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-4">
+											<label for="extra">目的地名称</label>
+										</div>
+										<div class="col-sm-8">
+											<input type="text" id="extra">
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--添加亮点介绍-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-4">
+											<label for="to_feature">亮点介绍</label>
+										</div>
+										<div class="col-sm-8">
+											<input type="text" id="to_feature">
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--添加图片-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-4">
+											<label for="upload-img">图片</label>
+										</div>
+										<div class="col-sm-8">
+											<div class="upfile">
+												<div class="fileimgAccount">+</div>
+												<img class="upload-img img1" src=" ">
+												<input type="file" class="file1" onchange="upfile(event)">
+												<input type="hidden" name="fruit" class="img_name" value="" />
+												<a onclick="delete_img(event)" class="delete_img">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								</br>
+								<!--所属类型-->
+								<div class="row">
+									<div class="col-md-6">
+										<div class="col-sm-4">
+											<label for="types">所属类型（可多选）</label>
+										</div>
+										<div class="col-sm-8">
+											<label><input name="Fruit" type="checkbox" value="1" />推荐 </label>&nbsp;
+											<label><input name="Fruit" type="checkbox" value="2" />周边 </label>&nbsp;
+											<label><input name="Fruit" type="checkbox" value="3" />全国 </label>&nbsp;
+											<label><input name="Fruit" type="checkbox" value="4" />日本 </label>&nbsp;
+											<label><input name="Fruit" type="checkbox" value="5" />东南亚 </label>&nbsp;
+											<label><input name="Fruit" type="checkbox" value="6" />海岛 </label>&nbsp;
+											<label><input name="Fruit" type="checkbox" value="7" />港澳台 </label>&nbsp;
+											<label><input name="Fruit" type="checkbox" value="8" />中东非 </label>&nbsp;
+											<label><input name="Fruit" type="checkbox" value="9" />邮轮游 </label>
+											<input type="hidden" class="checkbox_types" />
+										</div>
+									</div>
+								</div>
+								</br>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary add-activity">提交添加</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+			</div>
+			
+			<!--创建模态框2-->
+			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="jumbotron">
+								<div class="container">
+									<h3>修改旅行目的地</h3>
+								</div>
+							</div>
+						</div>
+						<div class="modal-body">
+							<!--模态框显示内容-->
+							<div class="container box">
+								
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary btn-activity">提交修改</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+			</div>
+		</div>
+		<!--表格模版-->
+		<textarea id="template" style="display:none">
+			{#template MAIN}
+			    {#foreach $T as entry}
+			         <tr>
+			         	<input type="hidden" id="id" value="{$T.entry.id}" />
+			         	<input type="hidden" id="feature" value="{$T.entry.feature}" />
+			         	<input type="hidden" id="name" value="{$T.entry.name}" />
+			         	<input type="hidden" id="img" value="{$T.entry.img}" />
+			         	<input type="hidden" id="state" value="{$T.entry.state}" />
+			         	<input type="hidden" id="state"  value='{JSON.stringify($T.entry)}' />
+			         	<td>{$T.entry.id}</td>
+			         	<td>{$T.entry.feature}</td>
+			         	<td>{$T.entry.name}</td>
+			         	<td>
+			         		<img style='width:100px;height: 50px' src="{$T.entry.img}"  />
+			         	</td>
+			         	<td>{formatDate($T.entry.createTime)}</td>
+			         	<td>{formatDate($T.entry.updateTime)}</td>
+			         	<td>{menutime($T.entry.state)}</td>
+			         	<td class='amend'>
+			         		<button type="button" class="btn btn-sm btn-success " onclick="btn_alter(event)"  data-toggle="modal" data-target="#myModal2" >修改</button>
+			         	</td>
+			         	<td>
+			         		 <button onclick="btn_state({$T.entry.id},{changer($T.entry.state)})">点击{to_menutime($T.entry.state)}</button>
+			         	</td>
+			         </tr>
+				{#/for}   
+			{#/template MAIN} 
+		</textarea>
+		
+		<!--表格模版2-->
+		<textarea id="template2" style="display:none">
+			{#template MAIN}
+			    <div class="row">
+					<div class="col-md-6">
+						<div class="col-sm-4">
+							<label for="extra2">目的地名称</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="extra2" value="{$T.name}">
+						</div>
+					</div>
+				</div>
+				</br>
+				<!--添加亮点介绍-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="col-sm-4">
+							<label for="to_feature2">亮点介绍</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="to_feature2" value="{$T.feature}">
+						</div>
+					</div>
+				</div>
+				</br>
+				<!--添加图片-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="col-sm-4">
+							<label for="upload-img">图片</label>
+						</div>
+						<div class="col-sm-8">
+							<div class="upfile">
+								<div class="fileimgAccount">+</div>
+								<img class="upload-img img1" src="{$T.img} ">
+								<input type="file" class="file1" onchange="upfile(event)">
+								<input type="hidden" name="fruit" class="img_name2" value="{$T.img}" />
+								<a onclick="delete_img(event)" style="display:block" class="delete_img">删除</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				</br>
+				<!--所属类型-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="col-sm-4">
+							<label for="types">所属类型（可多选）</label>
+						</div>
+						<div class="col-sm-8">
+							<!--<label  style="display: none;"><input name="Fruit2" type="checkbox" value="0"  checkbox/>其他 </label>&nbsp;-->
+							<label><input name="Fruit2" type="checkbox" value="1"  checkbox/>推荐 </label>&nbsp;
+							<label><input name="Fruit2" type="checkbox" value="2" />周边 </label>&nbsp;
+							<label><input name="Fruit2" type="checkbox" value="3" />全国 </label>&nbsp;
+							<label><input name="Fruit2" type="checkbox" value="4" />日本 </label>&nbsp;
+							<label><input name="Fruit2" type="checkbox" value="5" />东南亚 </label>&nbsp;
+							<label><input name="Fruit2" type="checkbox" value="6" />海岛 </label>&nbsp;
+							<label><input name="Fruit2" type="checkbox" value="7" />港澳台 </label>&nbsp;
+							<label><input name="Fruit2" type="checkbox" value="8" />中东非 </label>&nbsp;
+							<label><input name="Fruit2" type="checkbox" value="9" />邮轮游 </label>
+							<input type="hidden" class="checkbox_types2" />
+						</div>
+					</div>
+				</div>
+				</br>
+			{#/template MAIN} 
+		</textarea>
+
+	</body>
+	<script src="../scripts/lib/requirejs/require.js" data-main="../scripts/main-bourn.js" defer async="true"></script>
+	<script src="../scripts/lib/jQuery/upfile.js" type="text/javascript" charset="utf-8"></script>
+
+
+</html>

@@ -1,0 +1,17 @@
+#ctrl-img{
+    width: 50px;
+}
+
+.a2{
+    display: block;
+    cursor: pointer;
+    border: 1px solid #18BC9C;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.a2:hover{
+    border: 1px solid white;
+    background: #18BC9C;
+    color: white;
+}

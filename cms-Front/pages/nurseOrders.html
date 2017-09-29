@@ -1,0 +1,557 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>护理订单</title>
+		<link href="../styles/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="../styles/nurse-style.css" rel="stylesheet">
+		<link href="../styles/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="../styles/base.css" rel="stylesheet">
+		<link href="../styles/remodal-default-theme.css" rel="stylesheet">
+		<link href="../styles/remodal.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../styles/sweetalert/sweetalert.css" />
+		<style>
+			#PrevPage,
+			#NextPage {
+				float: left;
+				width: 50%;
+				text-align: center;
+				border: 0;
+				line-height: 46px;
+				font-size: 16px;
+				color: #008000;
+				cursor: pointer;
+				font-weight: 700;
+			}
+			
+			#Paging input:disabled,
+			#PrevPage input:disabled {
+				color: #cacaca;
+			}
+			
+			#PrevPage1,
+			#NextPage1 {
+				float: left;
+				width: 50%;
+				text-align: center;
+				border: 0;
+				line-height: 46px;
+				font-size: 16px;
+				color: #008000;
+				cursor: pointer;
+				font-weight: 700;
+			}
+			
+			#Paging1 input:disabled,
+			#PrevPage1 input:disabled {
+				color: #cacaca;
+			}
+			
+			#Paging1 {
+				display: none;
+			}
+			
+			.discass {
+				width: 100px;
+				height: 100px;
+			}
+			
+			.table-collapse {
+				position: absolute;
+				top: 30%;
+			}
+			
+			button.btn.part {
+				background-color: #009688;
+				color: #fff;
+			}
+			
+			td input,
+			.row.row_botton .col-md-3 input {
+				background-color: #009688;
+				color: #fff;
+				border-radius: 5px;
+			}
+			
+			td input[disabled],
+			.row.row_botton .col-md-3 input[disabled] {
+				background-color: #bbbbbb;
+			}
+			
+			.row.row_top {
+				background-color: #15a589;
+				color: #fff;
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			.row.row_top div {
+				border-right: 1px solid #e6e6e6;
+			}
+			
+			.row.row_center,
+			.row.row_botton {
+				border: 1px solid #e6e6e6;
+			}
+			
+			.row_center p,
+			.row_botton p {
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--创建导航条-->
+		<nav class="cms-navbar navbar navbar-fixed-top navbar-inverse navbar-styles" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand cms-font" href="index.html">鸿安CMS系统</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<p class="navbar-text">你好<span class="admin-name">admin</span></p>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">个人中心</a>
+								</li>
+								<li>
+									<a href="#">权限配置</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a class="logout">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+			<div class="cms-shadow"></div>
+		</nav>
+
+		<!--创建底部-->
+		<div class="container-fluid ">
+			<div class="row">
+				<!--创建侧边栏-->
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar ul-style">
+						<li class="active">
+
+							<a href="dish.html">
+								<img src="../images/dishmin.png">
+								<span class="text">菜品管理</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="banner.html">
+								<img src="../images/banner.png">
+								<span class="text">Banner管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="shop.html">
+								<img src="../images/shopMini.png">
+								<span class="text">商户认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="vision.html">
+								<img src="../images/visionMini.png">
+								<span class="text">版本管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activity.html">
+								<img src="../images/actMin.png">
+								<span class="text">充送活动</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="user.html">
+								<img src="../images/userMin.png">
+								<span class="text">用户管理</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="order.html">
+								<img src="../images/orderMin.png">
+								<span class="text">食堂订单</span>
+							</a>
+						</li>
+						<li class="active" style="background-color: #b4bcc2;">
+							<a href="nurseOrders.html">
+								<img src="../images/nurseOrdersMin.png">
+								<span class="text cms-font">护理订单</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="nurse.html">
+								<img src="../images/nurseMin.png">
+								<span class="text">护工认证</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="activityReleased.html">
+								<img src="../images/discountMini.png">
+								<span class="text cms-font">活动发布</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="updateDoctor.html">
+								<img src="../images/updateDoctorMini.png">
+								<span class="text cms-font">修改护理项目</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="customer.html">
+								<img src="../images/customerMini.png">
+								<span class="text cms-font">浏览反馈</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="skill.html">
+								<img src="../images/dishmin.png">
+								<span class="text cms-font">服务技能</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="hint.html">
+								<img src="../images/wenxinx.png">
+								<span class="text cms-font">温馨提示</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="healthTypes.html">
+								<img src="../images/healthMin.png">
+								<span class="text cms-font">健康报告类型</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="Item.html">
+								<img src="../images/ItemMin.png">
+								<span class="text cms-font">健康报告条目</span>
+							</a>
+
+						</li>
+						
+						<li class="active">
+							<a href="healthProducts.html">
+								<img src="../images/baojianpingMin.png">
+								<span class="text cms-font">保健品品牌</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="healthKind.html">
+								<img src="../images/bjpMin.png">
+								<span class="text cms-font">保健品种类</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="supplys.html">
+								<img src="../images/supplysMin.png">
+								<span class="text cms-font">供应商</span>
+							</a>
+
+						</li>
+						<li class="active">
+							<a href="bourn.html">
+								<img src="../images/bournMin.png">
+								<span class="text cms-font">旅行目的地</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="message.html">
+								<img src="../images/messageMin.png">
+								<span class="text cms-font">短信群发</span>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--创建操作面板-->
+			<div class="col-sm-9 col-md-10 col-sm-offset-3 col-md-offset-2 main-console">
+				<div style="display: block;" id="cover">
+
+				</div>
+
+				<!--当前位置显示-->
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header h3-style">
+                    <img src="../images/nurseOrdersMax.png">
+                    <a href="nurseOrders.html">护理订单</a>
+                </h3>
+						<ol class="breadcrumb breadcrumb-bg">
+							<li>
+								<img src="../images/web.png">
+								<span>Home</span>
+							</li>
+							<li>
+								<img src="../images/nurseOrdersMin.png">
+								<span>护理订单</span>
+							</li>
+
+						</ol>
+					</div>
+				</div>
+				<!--表格显示-->
+				<div class="row">
+					<div class="col-md-4">
+						<select id="type1" class="stateSelect select2">
+							<option>点击下拉查看订单状态</option>
+							<option>0.未支付</option>
+							<option>1.已接单</option>
+							<option>2.服务中</option>
+							<option>3.待服务介入中</option>
+							<option>4.已完成</option>
+							<option>5.待评价</option>
+							<option>6.用户自己删除</option>
+							<option>7.待接单</option>
+							<option>8.用户取消</option>
+							<option>9.护工取消</option>
+							<option>10.不接单</option>
+							<option>11.服务中介入</option>
+
+						</select>
+					</div>
+					<div class="col-md-8">
+						<select class="select1 stateSelect select">
+							<!--  <option>点击下拉显示需要搜索的类型</option>-->
+							<option>通过订单号搜索</option>
+							<option>通过下单人人名字搜索</option>
+							<option>通过下单人手机号搜索</option>
+							<option>通过护工名字搜索</option>
+							<option>通过护工电话搜索</option>
+						</select>
+						<input type="text" class="form-controlx wd" name="wd" placeholder="输入要搜索的值">
+						<button class="btn btn-default searchsub" id="searchOrder" onclick="return false">搜索</button>
+
+						<!--<div class="form-group serch-input">
+							<input type="text" class="form-control wd" name="wd" placeholder="输入要搜索的值">
+						</div>
+						<button class="btn btn-default searchsub" id="searchOrder" onclick="return false">搜索</button>-->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-hover cms-table">
+							<thead>
+								<tr>
+									<th>数据id</th>
+									<th>订单号</th>
+									<th>下单人手机号</th>
+									<th>服务时间</th>
+
+									<th>护理人员名字</th>
+									<th>护理人员联系电话</th>
+									<th>详情</th>
+									<th>状态</th>
+									<th>操作</th>
+
+								</tr>
+							</thead>
+							<tbody id="tbody1">
+
+							</tbody>
+						</table>
+						<div id="Paging">
+							<input type="button" id="PrevPage" value="上一页" />
+							<input type="button" id="NextPage" value="下一页">
+							<input type="text" value="0" style="display: none;" id="dishpageval" />
+							<div id="pagination" style="text-align: center;">
+								<span>第</span>
+								<b id="change1">1</b>
+								<span>页</span>
+							</div>
+						</div>
+						<div id="Paging1">
+							<input type="button" id="PrevPage1" value="上一页" />
+							<input type="button" id="NextPage1" value="下一页">
+							<input type="text" value="0" style="display: none;" id="dishpageval1" />
+							<div id="pagination1" style="text-align: center;">
+								<span>第</span>
+								<b id="change2">1</b>
+								<span>页</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!------------详情模态框----------------->
+		<div class="remodal" data-remodal-id="modaly" style="max-width:1000px;">
+			<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+
+		</div>
+
+		<!--数据表格模版-->
+		<textarea id="template" style="display:none">
+			{#template MAIN}
+			    {#foreach $T as entry}
+			      <tr>
+			      	<input type="hidden" id="did" value="{$T.entry.id}" />
+			      	<input type="hidden" id="sn" value="{$T.entry.sn}" />
+			      	<input type="hidden" id="mobile" value="{$T.entry.mobile}" />
+			      	<input type="hidden" id="serviceTime" value="{$T.entry.serviceTime}" />
+			      	<input type="hidden" id="address" value="{$T.entry.address}" />
+			      	<input type="hidden" id="remark" value="{$T.entry.remark}" />
+			      	<input type="hidden" id="self" value="{$T.entry.self}" />
+			      	<input type="hidden" id="type" value="{$T.entry.type}" />
+			      	<input type="hidden" id="nurse" value="{$T.entry.nurse}" />
+			      	<input type="hidden" id="phone" value="{$T.entry.phone}" />
+			      	<input type="hidden" id="contacts" value="{$T.entry.contacts}" />
+			      	<input type="hidden" id="sex" value="{$T.entry.sex}" />
+			      	<input type="hidden" id="state" value="{$T.entry.state}" />
+			      	<input type="hidden" id="title" value="{$T.entry.title}" />
+			      	<input type="hidden" id="price" value="{$T.entry.price}" />
+			      	<input type="hidden" id="num" value="{$T.entry.num}" />
+			      	<input type="hidden" id="nid" value="{$T.entry.nid}" />
+			      	<input type="hidden" id="method" value="{method($T.entry.method)}" />
+			      	<input type="hidden" id="createTime" value="{formatDate($T.entry.createTime)}" />
+			      	<input type="hidden" id="foru" value="{method($T.entry.foru)}" />
+			      	<input type="hidden" id="forn" value="{method($T.entry.forn)}" />
+			      	<input type="hidden" id="forc" value="{method($T.entry.forc)}" />
+			      	
+			      	
+			      	<td>{$T.entry.id}</td>
+			      	<td>{$T.entry.sn}</td>
+			      	<td>{$T.entry.mobile}</td>
+			      	<td>{$T.entry.serviceTime}</td>
+			      	<td>{$T.entry.nurse}</td>
+			      	<td>{$T.entry.phone}</td>
+			      	<td><a class='a1' onclick="Orders(event)" href='#modaly'>详情</a></td>
+			      	<td>{stateV($T.entry.state)}</td>
+			      	
+		      	        {#if $T.entry.state==2}<td><input type="button" id="mark" onclick="mark(event,{$T.entry.id})" value="标记异常" /></td>  
+		      	        
+					    {#elseif $T.entry.state==3} <td><input type="button" name="" id="" value="去处理" onclick="go_nurse(event)"/></td>  
+					    
+						{#elseif $T.entry.state==4} <td><input type="button" name="" id="" value="已完成" disabled="disabled" /></td>  
+						{#elseif $T.entry.state==5} <td><input type="button" name="" id="" value="已完成" disabled="disabled" /></td>  
+						
+						{#elseif $T.entry.state==8} <td><input type="button" name="" id="" value="已完成" disabled="disabled" /></td>  
+						                              
+						{#elseif $T.entry.state==9} <td><input type="button" name="" id="" value="已完成" disabled="disabled" /></td>  
+						                            
+						{#elseif $T.entry.state==11}<td><input type="button" name="" id="" value="去处理" onclick="go_nurse(event)" /></td>  
+						
+					    {#else} <td><input type="button" name="" id="" value="标记异常" disabled="disabled" /></td>  
+					    {#/if}  
+			       	
+			     </tr>
+			    {#/for}
+			{#/template MAIN}
+		</textarea>
+		<!--详情模态框数据-->
+		<textarea id="template2" style="display:none">
+			{#template MAIN}
+			   <div class="row row_top">
+				<div class="col-xs-3">服务内容</div>
+				<div class="col-xs-6">下单人员信息</div>
+				<div class="col-xs-3">护理人员信息</div>
+			</div>
+			<div class="row row_center">
+				<div class="col-xs-3">
+					<p><b>服务名称：</b>{$T.title}</p>
+					
+					<p><b>服务价格：</b>{$T.num*$T.price}元</p>
+					
+					<p><b>项目数量：</b>{$T.num}</p>
+					<p><b>总计：</b>{$T.price}元</p>
+				</div>
+				<div class="col-xs-6">
+					<p><b>数据ID：</b>{$T.did}</p>
+					<p><b>订单号：</b>{$T.sn}</p>
+					
+					<p><b>下单时间：</b>{$T.createTime}</p>
+					
+					<p><b>下单人手机号：</b>{$T.mobile}</p>
+					<p><b>订单联系人：</b>{$T.contacts}</p>
+					<p><b>服务时间：</b>{$T.serviceTime}</p>
+					<p><b>下单地址：</b>{$T.address}</p>
+					<p><b>自理类型：</b>{#if $T.self==1}全自理 {#elseif $T.self==2}半自理{#elseif $T.self==3 }不自理{#/if}</p>
+				</div>
+				<div class="col-xs-3">
+					<p><b>护理人员ID：</b>{$T.nid}</p>
+					<p><b>护理人员姓名：</b>{$T.nurse}</p>
+					<p><b>护理人员手机：</b>{$T.phone}</p>
+				</div>
+			</div>
+			<div class="row row_botton">
+				<div class="col-md-3"><p><b>服务状态：</b>{#if $T.state==0}待支付 {#elseif $T.state==1}已接单{#elseif $T.state==2 }在服务{#elseif $T.state==3 }等待处理{#elseif $T.state==4 }已完成{#elseif $T.state==5 }待评价{#elseif $T.state==6 }用户删除{#elseif $T.state==7 }待接单{#elseif $T.state==8 }用户取消{#elseif $T.state==9 }护工取消{#elseif $T.state==10 }不接单{#elseif $T.state==11 }服务中介入{#/if}</p></div>
+				<div class="col-md-6"><p><b>处理方案：</b>{$T.method}</p>
+					                  <p><b>退还给用户的金额：</b>{$T.foru}</p>
+					                  <p><b>分配给护工的金额：</b>{$T.forn}</p>
+					                  <p><b>平台扣留的金额：</b>{$T.forc}</p>
+				</div>
+				<div class="col-md-3">
+					  
+					
+				</div>
+			</div>
+			      
+			 
+			{#/template MAIN}
+		</textarea>
+
+	</body>
+	<!--<script src="../scripts/lib/requirejs/require.js" data-main="../scripts/main-nurseOrders.js" defer async="true"></script>-->
+	<script src="../scripts/lib/jQuery/jquery-jtemplates.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/jQuery/jquery.min.js"></script>
+	<script src="../scripts/lib/bootstrap/bootstrap.min.js"></script>
+	<script src="../scripts/lib/jQuery/jquery.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/jQuery/jquery.md5.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/jQuery/jquery-time.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/sweetalert/sweetalert-dev.js"></script>
+	<script src="../scripts/lib/jQuery/remodal.js"></script>
+	<script src="../scripts/lib/jQuery/upfile.js"></script>
+	<script src="../scripts/lib/jQuery/jquery-jtemplates.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/lib/sweetalert/sweetalert-dev.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/app/nurseOrders.js"></script>
+
+</html>

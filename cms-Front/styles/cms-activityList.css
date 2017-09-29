@@ -1,0 +1,84 @@
+@font-face {
+    font-family: NotoSans-Regular;
+    src: url('../fonts/NotoSans-Regular.ttf');
+}
+
+/**消除chrome对inut缓存的难看颜色**/
+#username,#password:-webkit-autofill{
+    box-shadow: 0 0 0 38px
+    white inset;
+}
+
+.cms-jumbotron{
+    height: 222px;
+    max-height: 588px;
+}
+
+.cms-activity-container{
+    margin-top: -10px;
+}
+
+#returnImg{
+    float: right;
+    margin-right: 10%;
+    width: 150px;
+    height: 32px;
+}
+
+#returnImg a{
+    color: #34495E;
+}
+
+.cms-activity-form{
+    width: 50%;
+    height: 100%;
+    margin-left: 26%;
+    margin-top: 2%
+}
+
+.prompt-info{
+    color: red;
+}
+
+.showImg{
+    width: 150px;
+    height: 100px;
+    border: 1px solid #BDC3C7;
+}
+
+.cms-createActivity-banner{
+    font-size: 5px;
+}
+
+#goActivityList{
+    float: right;
+    width: 150px;
+    height: 32px;
+    margin-right: -15%;
+    margin-top: 4%;
+}
+
+#goActivityList a{
+    color: black;
+}
+
+.stateSelect{
+    height: 40px;
+    border: 1px solid white;
+    font-size: 10px;
+    background: #1BBC9D;
+    color: white;
+}
+
+
+a{
+    cursor: pointer;
+}
+
+.noData{
+    margin: auto 40%;
+    padding: 2%;
+    font-size: 20px;
+    text-align: center;
+    color: gray;
+}

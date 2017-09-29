@@ -1,0 +1,176 @@
+<!--
+ ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>活动列表</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../styles/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../styles/flatui/flat-ui.min.css" rel="stylesheet">
+    <link href="../styles/animate.css" rel="stylesheet">
+    <link href="../styles/cms-activityList.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="jumbotron cms-jumbotron">
+    <div id="returnImg">
+        <img class="fadeImg" src="../images/return1.png">
+        <a href="activityReleased.html"><span class="fadeInRight">返回控制台</span></a>
+    </div>
+    <div class="container cms-activity-container">
+        <h3>店铺活动列表</h3>
+    </div>
+</div>
+<div class="container">
+
+    <select class="select1 stateSelect select" id="type1" >
+        <option selected="selected" disabled="disabled">请点击下拉选择类型</option>
+        <option>1 -店铺首单立减</option>
+        <option>2 -满减</option>
+    </select>
+    <div class="table-responsive table-hover">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>商家id</th>
+                <th>商户名称</th>
+                <th>优惠信息</th>
+                <th>优惠额度,浮点数</th>
+                <th>优惠类型</th>
+                <th>发布时间</th>
+                <th>操作</th>
+                <th>店铺详情</th>
+            </tr>
+            </thead>
+            <tbody id="tbody1">
+
+            </tbody>
+        </table>
+        <div style="display: none" class="noData">没有找到对应数据</div>
+        <div id="Paging">
+            <input type="button" id="PrevPage" value="上一页" />
+            <input type="button" id="NextPage" value="下一页">
+            <input type="text" value="0" style="display: none;" id="dishpageval" />
+            <div id="pagination" style="text-align: center;">
+                <span>第</span>
+                <b id="change1">1</b>
+                <span>页</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--创建模态栏-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="jumbotron">
+                        <div class="container">
+                            <h3>是否删除</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="submit" class="btn btn-primary delete-activity">
+                        删除
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="jumbotron">
+                        <div class="container">
+                            <h3>商家详情</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <!--模态框显示内容-->
+                    <div class="container">
+                        <!--店铺名称-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-sm-6">
+                                    <label for="name">店铺名称</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span class="name" id="name"></span>
+                                </div>
+                            </div>
+                        </div>
+                        </br>
+                        <!--店铺联系方式-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-sm-6">
+                                    <label for="mobile">店铺联系方式</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span class="mobile" id="mobile"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--店铺地址-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-sm-6">
+                                    <label for="address">店铺地址</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span class="address" id="address"></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+
+</div>
+</body>
+<script src="../scripts/lib/jQuery/jquery.min.js"></script>
+<script src="../scripts/lib/flatui/flat-ui.min.js"></script>
+<script src="../scripts/lib/jQuery/jquery.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../scripts/lib/jQuery/jquery-time.js" type="text/javascript" charset="utf-8"></script>
+<script src="../scripts/lib/jQuery/upfile.js" type="text/javascript" charset="utf-8"></script>
+<script src="../scripts/lib/sweetalert/sweetalert-dev.js"></script>
+<script src="../scripts/app/activityList.js"></script>
+</html>
